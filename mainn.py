@@ -24,6 +24,7 @@ def ClearDis(col):
   #Function to clear display black or white
   display.fill(Adafruit_EPD.BLACK) if col == 'black' else display.fill(Adafruit_EPD.WHITE)
 
+
 while True:
   if upbut == False:
     image = Image.open("CurDis.png")

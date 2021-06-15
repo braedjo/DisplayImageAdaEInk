@@ -17,17 +17,20 @@ select opt in ${OPTLIST[@]} quit; do
       break
       ;;
     Remote)
-      printf "\nthis shid not yet implemented G!\n\n"
-      printf "Closing\n"
-      break
-      ;;
-    Local)
       printf "Starting WG Tunnel...\n"
       sleep 2
       sudo wg-quick up pootunnel
       printf "Waiting 25 Secs\n"
       sleep 25
       python main.py
+      printf "\nthis shid not yet implemented G!\n\n"
+      printf "Closing\n"
+      break
+      ;;
+    Local)
+      printf "Starting Upload Site In 10 Seconds...\n"
+      sleep 10
+      python server.py
       break
       ;;
     quit)
